@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COFFEE BORODA — кав'ярня у Вінниці</title>
+  <meta name="description" content="COFFEE BORODA — friendly місце зі смачною кавою у Вінниці. Авторські та сезонні напої, десерти, свіжа випічка, кава з собою. Київська, 8.">
+  <meta name="theme-color" content="#140c08">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Manrope:wght@400;500;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three.module.min.js" } }
+  </script>
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <svg class="loader__beard" viewBox="0 0 120 80"><path d="M10 10c10 8 22 10 34 4 6-3 11-3 16 2 5-5 10-5 16-2 12 6 24 4 34-4-2 26-14 44-30 56-6 4-13 6-20 6s-14-2-20-6C24 54 12 36 10 10z"/></svg>
+      <div class="loader__count"><span>0</span>%</div>
+      <div class="loader__bar"><i></i></div>
+    </div>
+  </div>
+
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span></span></div>
+
+  <header class="nav">
+    <a href="#top" class="logo" aria-label="COFFEE BORODA — на початок">
+      <svg viewBox="0 0 120 80" aria-hidden="true"><path d="M10 10c10 8 22 10 34 4 6-3 11-3 16 2 5-5 10-5 16-2 12 6 24 4 34-4-2 26-14 44-30 56-6 4-13 6-20 6s-14-2-20-6C24 54 12 36 10 10z"/></svg>
+      <span>COFFEE<b>BORODA</b></span>
+    </a>
+    <nav class="nav__links">
+      <a href="#about">Про нас</a>
+      <a href="#season">Осінь</a>
+      <a href="#menu">Меню</a>
+      <a href="#events">Події</a>
+      <a href="#visit">Адреси</a>
+    </nav>
+    <a class="btn btn--small magnetic" href="https://www.google.com/maps/search/?api=1&query=COFFEE+BORODA+Kyivs'ka+St+8+Vinnytsia" target="_blank" rel="noopener">Маршрут</a>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__meta">
+        <span class="pill pill--live"><i></i>Відчинено · до 20:00</span>
+        <span class="pill">★ 4,8 · 96 відгуків</span>
+      </div>
+      <h1 class="hero__title">
+        <span class="line"><span>Кава</span></span>
+        <span class="line"><span>з <em>бородою</em></span></span>
+        <span class="line"><span>і характером</span></span>
+      </h1>
+      <p class="hero__lead">Friendly місце зі смачною кавою у Вінниці. Авторські та сезонні напої, десерти й свіжа випічка — тут або з собою.</p>
+      <div class="hero__cta">
+        <a class="btn magnetic" href="#menu">Дивитись меню</a>
+        <a class="btn btn--ghost magnetic" href="#visit">Як нас знайти</a>
+      </div>
+      <div class="hero__scroll"><span>Гортай</span><i></i></div>
+      <div class="hero__addr">Київська, 8 · Вінниця</div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Еспресо</span><b>✦</b><span>Авторські напої</span><b>✦</b><span>Еклери</span><b>✦</b><span>Свіжа випічка</span><b>✦</b><span>Кава з собою</span><b>✦</b><span>Мелена кава для дому</span><b>✦</b>
+        <span>Еспресо</span><b>✦</b><span>Авторські напої</span><b>✦</b><span>Еклери</span><b>✦</b><span>Свіжа випічка</span><b>✦</b><span>Кава з собою</span><b>✦</b><span>Мелена кава для дому</span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="about__text">
+        <p class="eyebrow">01 — Про нас</p>
+        <h2 class="split">Кав'ярня з великим асортиментом десертів, свіжою випічкою і кавою, яку хочеться повторити.</h2>
+        <p class="reveal">Готуємо авторські та сезонні напої, продаємо мелену каву в пачках для дому і завжди пакуємо все з собою. Заходь на 10 хвилин або залишайся на годину — тут затишно в будь-яку погоду.</p>
+      </div>
+      <div class="stats">
+        <div class="stat reveal"><b data-count="4.8" data-decimals="1">0</b><span>рейтинг Google</span></div>
+        <div class="stat reveal"><b data-count="96">0</b><span>відгуків гостей</span></div>
+        <div class="stat reveal"><b data-count="5">0</b><span>міст України</span></div>
+        <div class="stat reveal"><b data-count="12" data-suffix="K+">0</b><span>в Instagram</span></div>
+      </div>
+    </section>
+
+    <!-- SEASON (horizontal scroll) -->
+    <section class="season" id="season">
+      <div class="season__head">
+        <p class="eyebrow">02 — Осінь у Boroda</p>
+        <h2>Нові еклери<br><em>вже на вітрині</em></h2>
+      </div>
+      <div class="h-track">
+        <article class="card tilt" style="--glaze:#b3263a;--glaze2:#7d1424;--dots:#f3e9dc">
+          <div class="eclair"><i class="eclair__body"></i><i class="eclair__glaze"></i></div>
+          <div class="card__info"><span>Еклер</span><h3>Червоний оксамит</h3><p>Ніжний крем і оксамитова глазур — класика, що не набридає.</p></div>
+        </article>
+        <article class="card tilt" style="--glaze:#7a2333;--glaze2:#4a0f1c;--dots:#e6a14c">
+          <div class="eclair"><i class="eclair__body"></i><i class="eclair__glaze"></i></div>
+          <div class="card__info"><span>Еклер</span><h3>Глінтвейн</h3><p>Прянощі, цитрус і тепло осіннього вечора в одному десерті.</p></div>
+        </article>
+        <article class="card tilt" style="--glaze:#2b2a33;--glaze2:#121117;--dots:#9a9aa8">
+          <div class="eclair"><i class="eclair__body"></i><i class="eclair__glaze"></i></div>
+          <div class="card__info"><span>Еклер</span><h3>Мак</h3><p>Маковий крем із легкою солодкістю — для тих, хто любить затишне.</p></div>
+        </article>
+        <article class="card card--drink tilt">
+          <div class="cupcss"><i class="cupcss__steam"></i><i class="cupcss__steam"></i><i class="cupcss__body"></i><i class="cupcss__handle"></i></div>
+          <div class="card__info"><span>Сезон</span><h3>Осінні авторські напої</h3><p>Чекліст ідеальної осені: скуштуй усі сезонні позиції, поки вони в меню.</p></div>
+        </article>
+        <article class="card card--end">
+          <h3>Скільки з них ти вже спробував?</h3>
+          <a class="btn magnetic" href="https://www.instagram.com/coffee_boroda/" target="_blank" rel="noopener">Новинки в Instagram</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="menu" id="menu">
+      <div class="menu__head">
+        <p class="eyebrow">03 — Меню</p>
+        <h2 class="split">Те, по що повертаються</h2>
+        <p class="menu__price reveal">1–200 ₴ на особу</p>
+      </div>
+      <ul class="menu__list">
+        <li class="reveal"><span class="num">01</span><h3>Класика на еспресо</h3><p>Еспресо, американо, капучино, лате, флет вайт</p><i class="arrow">↗</i></li>
+        <li class="reveal"><span class="num">02</span><h3>Авторські та сезонні</h3><p>Напої, яких немає в інших кав'ярнях міста</p><i class="arrow">↗</i></li>
+        <li class="reveal"><span class="num">03</span><h3>Десерти</h3><p>Еклери, тістечка та великий вибір на вітрині</p><i class="arrow">↗</i></li>
+        <li class="reveal"><span class="num">04</span><h3>Свіжа випічка</h3><p>Щодня — до кави або з собою в дорогу</p><i class="arrow">↗</i></li>
+        <li class="reveal"><span class="num">05</span><h3>Кава для дому</h3><p>Мелена кава в пачках, щоб смак Boroda був і вдома</p><i class="arrow">↗</i></li>
+      </ul>
+    </section>
+
+    <!-- EVENTS -->
+    <section class="events" id="events">
+      <p class="eyebrow">04 — Події</p>
+      <h2 class="split">Жива музика у <em>City Cafe</em></h2>
+      <div class="events__grid">
+        <article class="event reveal">
+          <span class="event__tag">Жовтень</span>
+          <h3>Затишні вечори з живим звуком</h3>
+          <p>Жовтень створений для теплих вечорів — запрошуємо артистів і чекаємо на тебе в City Cafe.</p>
+          <span class="event__place">вул. Зодчих, 12</span>
+        </article>
+        <article class="event reveal">
+          <span class="event__tag">Для своїх</span>
+          <h3>Першими куштуємо новинки</h3>
+          <p>Разом із постійними гостями знайомимося з новим меню ще до того, як воно з'явиться на вітрині.</p>
+          <span class="event__place">Слідкуй в Instagram</span>
+        </article>
+        <article class="event event--accent reveal">
+          <span class="event__tag">Порада</span>
+          <h3>Коли зайти</h3>
+          <p>Гості зазвичай проводять у нас 10–45 хвилин. Близько 17:00 буває трохи людно — саме час для кави з собою.</p>
+          <span class="event__place">Київська, 8</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- VISIT -->
+    <section class="visit" id="visit">
+      <div class="visit__head">
+        <p class="eyebrow">05 — Адреси</p>
+        <h2 class="split">Заходь на каву у Вінниці</h2>
+      </div>
+      <div class="visit__grid">
+        <a class="place tilt reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=COFFEE+BORODA+Kyivs'ka+St+8+Vinnytsia">
+          <span class="place__badge">Відчинено до 20:00</span>
+          <h3>Київська, 8</h3>
+          <p>COFFEE BORODA · 1–200 ₴</p>
+          <span class="place__go">Прокласти маршрут ↗</span>
+        </a>
+        <a class="place tilt reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=COFFEE+BORODA+City+Cafe+Zodchykh+12+Vinnytsia">
+          <span class="place__badge place__badge--new">City Cafe</span>
+          <h3>Зодчих, 12</h3>
+          <p>Новий заклад · жива музика</p>
+          <span class="place__go">Прокласти маршрут ↗</span>
+        </a>
+        <a class="place tilt reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=COFFEE+BORODA+Oleksandra+Dovzhenka+99+Vinnytsia">
+          <h3>Олександра Довженка, 99</h3>
+          <p>COFFEE BORODA</p>
+          <span class="place__go">Прокласти маршрут ↗</span>
+        </a>
+        <a class="place tilt reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=COFFEE+BORODA+Akademika+Yushchenka+3+Vinnytsia">
+          <h3>Академіка Ющенка, 3</h3>
+          <p>COFFEE BORODA</p>
+          <span class="place__go">Прокласти маршрут ↗</span>
+        </a>
+      </div>
+      <div class="cities reveal">
+        <span>Також нас можна знайти:</span>
+        <b>Вінниця</b><b>Львів</b><b>Трускавець</b><b>Хмельницький</b><b>Сокільники</b>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="rating">
+      <div class="rating__score"><b data-count="4.8" data-decimals="1">0</b><span>★★★★★</span></div>
+      <div class="rating__text">
+        <h2 class="split">96 гостей уже оцінили Boroda на Google</h2>
+        <a class="btn magnetic" href="https://www.google.com/maps/search/?api=1&query=COFFEE+BORODA+Kyivs'ka+St+8+Vinnytsia" target="_blank" rel="noopener">Залишити відгук</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__big" aria-hidden="true"><span>B</span><span>O</span><span>R</span><span>O</span><span>D</span><span>A</span></div>
+    <div class="footer__row">
+      <p>Київська, 8, Вінниця, 21000</p>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/coffee_boroda/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/CoffeeBorodaUA" target="_blank" rel="noopener">Facebook</a>
+      </div>
+      <p>© <span id="year">2026</span> COFFEE BORODA</p>
+    </div>
+  </footer>
+
+  <script src="vendor/gsap.min.js"></script>
+  <script src="vendor/ScrollTrigger.min.js"></script>
+  <script src="vendor/lenis.min.js"></script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
